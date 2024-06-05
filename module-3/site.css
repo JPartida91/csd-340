@@ -1,0 +1,29 @@
+#container {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+h1,h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4 {
+  background-color: #ca49ca; 
+  color: #ffffff;
+  border: 1px solid #D6A800; 
+  padding: 10px;
+}
+
+a {
+  color: #c20af5; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: #009900; 
+}
+
+a:visited {
+  color: #f27107; 
+}
