@@ -1,0 +1,40 @@
+#image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0;
+  row-gap: 0;
+  margin-top: 10%;
+}
+
+#image-gallery div {
+  display: grid; /* Add grid elements within each div */
+  grid-template-rows: auto 1fr; /* Adjust grid rows as needed */
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0;
+}
+
+h1, h3, figure, figcaption {
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+#bottom-div {
+  width: 100%;
+  margin-top: 60%;
+  float: right;
+  margin-bottom: 20px;
+}
+
+a.back-link {
+  text-decoration: none;
+  float: right;
+}
+
+a.back-link:hover {
+  text-decoration: underline;
+}
