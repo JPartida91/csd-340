@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Juan Partida">
+    <meta name="description" content="Module 9.3 Assignment">
+    <meta name="keywords" content="HTML, CSS, web development">
+    <meta name="robots" content="nofollow">
+    <link rel="stylesheet" type="text/css" href="Partida_Mod9_3.css">
+    <title>CSD 340 Development with HTML and CSS</title>
+    <script>
+        // Function to replace text based on the provided id
+        function replaceText(id) {
+            var text;
+            // Check the id and assign the corresponding text
+            if (id === 'name') {
+                text = "Juan Partida";
+            } else if (id === 'city') {
+                text = "Reno";
+            } else if (id === 'team') {
+                text = "Boston Celtics";
+
+            } else if (id === 'work') {
+                text = "Waste Management";
+            }
+            // Replace the inner HTML of the element with the new text
+            document.getElementById(id).innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <p class="intro"> Hello, My name is <span id="name">____</span>. I am from <span id="city">____</span>,
+            Nevada. I have lived here all my life, and I hope to get career opportunities outside of Reno.</p>
+        <p>Some of my hobbies include watching and playing sports, although it has been rough trying to keep up and play
+            sports since I started school. My favorite sports team is the <span id="team">____</span>. I also enjoy
+            playing video games. </p>
+        <p>I currently work at <span id="work">____</span> as a driver and have been there for five years. I am looking forward to
+            changing careers. I like new challenges.</p>
+        <p>I also like hitting the gym, running, or trying out a new workout routine, and exercise can do wonders for the
+            body and mind. It's great to push yourself, set goals, and enjoy the process of becoming stronger and more
+            energized </p>
+
+        <button onclick="replaceText('name')">Juan Partida</button>
+        <button onclick="replaceText('city')">Reno</button>
+        <button onclick="replaceText('team')">Boston Celtics</button>
+        <button onclick="replaceText('work')">Waste Management</button>
+    </div>
+</body>
+
+</html>
