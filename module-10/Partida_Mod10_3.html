@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Juan Partida">
+    <meta name="description" content="Module 10.3 Assignment">
+    <meta name="keywords" content="HTML, CSS, web development">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <div class="image-container">
+        <img src="cards/1.png" alt="Ace of Spades" onclick="changeImage(this)">
+        <img src="cards/10.png" alt="Ten of Spades" onclick="changeImage(this)">
+        <img src="cards/12.png" alt="Queen of Spades" onclick="changeImage(this)">
+    </div>
+    <script>
+        function changeImage(imgElement) {
+            
+            imgElement.src = "cards/52.png"; // Change the image source
+            alert("Image clicked: " + imgElement.alt); //  alert message with the alt text of the clicked image
+        }
+    </script>
+</body>
+</html>
