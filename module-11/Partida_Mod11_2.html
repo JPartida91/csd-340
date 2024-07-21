@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Juan Partida">
+    <meta name="description" content="Module 11.2 Assignment">
+    <meta name="keywords" content="HTML, CSS, web development">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>    
+    <body>
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        <input type="text" id="inputBox" placeholder="Enter text here">
+        <button onclick="addElement()">Add</button>
+        <button onclick="deleteLastElement()">Delete Last Entry</button>
+        <button onclick="displayArray()">Display</button>
+        <div id="displayArea"></div>
+
+        <script>
+            let myArray = [];
+
+            function addElement() {
+                const inputBox = document.getElementById('inputBox');
+                const inputValue = inputBox.value;
+                if (inputValue) {
+                    myArray.push(inputValue);
+                    alert(`Added: ${inputValue} at position ${myArray.length}`);
+                    inputBox.value = '';
+                } else {
+                    alert('Please enter a value to add.');
+                }
+            }
+
+            function deleteLastElement() {
+                if (myArray.length > 0) {
+                    const removedElement = myArray.pop();
+                    alert(`Deleted: ${removedElement}`);
+                } else {
+                    alert('Array is empty, nothing to delete.');
+                }
+            }
+
+            function displayArray() {
+                const displayArea = document.getElementById('displayArea');
+                displayArea.innerHTML = '';
+                if (myArray.length > 0) {
+                    myArray.forEach((element, index) => {
+                        displayArea.innerHTML += `${index + 1}. ${element}<br>`;
+                    });
+                } else {
+                    displayArea.innerHTML = 'Array is empty.';
+                }
+            }
+        </script>
+    </body>
+    </html>
+    
